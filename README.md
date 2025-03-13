@@ -3,7 +3,16 @@ a XFCE4 panel plugin that shows additional time zones on mouseover
 
 # installation
 
-(requires gcc and sudo permissions) `./install`
+(requires gcc and sudo permissions)
+
+`git clone https://codeberg.org/snailboy/xfce-time-zone-clock`
+
+`cd xfce-time-zone-clock`
+
+`./install`
+
+then add to a panel
+
 
 # configuration
 
