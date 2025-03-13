@@ -1,0 +1,9 @@
+#!/bin/bash 
+cd src
+gcc -Wall -fPIC `pkg-config --cflags libxfce4panel-2.0` -c timezoneclock.c dialogs.c
+gcc timezoneclock.o dialogs.o -shared -o libtimezoneclock.so
+sudo cp timezoneclock.desktop /usr/share/xfce4/panel/plugins/
+sudo cp libtimezoneclock.so /usr/lib64/xfce4/panel/plugins/
+xfce4-panel -r
+rm *.so
+rm *.o

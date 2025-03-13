@@ -1,0 +1,11 @@
+[Xfce Panel]
+Type=X-XFCE-PanelPlugin
+Encoding=UTF-8
+Name=time zone clock
+Comment=a clock plugin that allows other time zones to be shown on mouseover
+Icon=org.xfce.panel.clock
+X-XFCE-Module=timezoneclock
+X-XFCE-Internal=false
+X-XFCE-Unique=false
+X-XFCE-API=2.0
+
