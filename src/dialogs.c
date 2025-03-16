@@ -149,7 +149,7 @@ void configure(XfcePanelPlugin *plugin, clockPlugin *clock) {
 
 	// additional time zones
 	GtkWidget *additionalTimeZonesBox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 5);
-	GtkWidget *additionalTimeZonesLabel = gtk_label_new("additional time zones:\n(comma delimited, no spaces)");
+	GtkWidget *additionalTimeZonesLabel = gtk_label_new("tooltip time zones:\n(comma delimited, no spaces)");
 	GtkWidget *additionalTimeZonesEntry = gtk_entry_new();
 	gtk_entry_set_text(GTK_ENTRY(additionalTimeZonesEntry), clock->additionalTimeZones); 
 	gtk_box_pack_start(GTK_BOX(additionalTimeZonesBox), additionalTimeZonesLabel, FALSE, FALSE, 0);

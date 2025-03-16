@@ -40,7 +40,7 @@ ex: `%a, %b %d \n%l:%M:%S %P`
 
 the font for the panel clock
 
-## additional time zones
+## tooltip time zones
 the time zones to display in the tooltip
 
 ex: `America/Chicago,Europe/London,UTC`
