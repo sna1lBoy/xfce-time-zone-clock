@@ -134,22 +134,23 @@ static gboolean updateTime(gpointer userData) {
 
 // update tooltip clocks
 static gboolean updateTooltip(gpointer userData) {
-	
-	// extract struct data
+
 	tooltipData *data = (tooltipData *)userData;
-	gchar *timeZonesCopy = g_strdup(data->additionalTimeZones ? data->additionalTimeZones : "");
-	char *format = g_strdup(data->format);
-	char *src = data->format, *dst = format;
-	while (*src) {
-    		if (*src != '\n') {
-			*dst++ = *src;
-		}
-		src++;
-	}
-	*dst = '\0';
 
 	// if given a list of time zones
 	if (data->additionalTimeZones != NULL && strlen(data->additionalTimeZones) > 0) {
+
+		// extract struct data
+		gchar *timeZonesCopy = g_strdup(data->additionalTimeZones ? data->additionalTimeZones : "");
+		char *format = g_strdup(data->format);
+		char *src = data->format, *dst = format;
+		while (*src) {
+    			if (*src != '\n') {
+				*dst++ = *src;
+			}
+			src++;
+		}
+		*dst = '\0';
 
 		// prepare to parse list
 		gchar *result = g_strdup("");
